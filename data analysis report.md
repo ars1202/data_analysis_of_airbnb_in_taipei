@@ -23,7 +23,8 @@ GROUP BY `host_neighbourhood` ORDER BY `location` DESC;
 ```
 使用COUNT對host_neighbourhood欄位計數，得到各個區域房源數量。並用python畫出區域數量圓餅圖  
 
-![image](https://hackmd.io/_uploads/r1ATbQCZC.png)
+![room_location](https://github.com/ars1202/data_analysis_of_airbnb_in_taipei/assets/16890505/d1c2ea1b-3096-4341-a185-325de904b07a)
+
 * 如圖可知，最多房源的行政區為萬華區，占了台北市房源約1/4，其次則為大安區19%、中正區13.7%，這三區的房源占比達到了整個台北市的5%左右。
 * 為何萬華的房源那麼多?我認為是因為這裡坐落著台灣最有名的商業區-西門町
 
