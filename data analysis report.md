@@ -23,7 +23,7 @@ GROUP BY `host_neighbourhood` ORDER BY `location` DESC;
 ```
 使用COUNT對host_neighbourhood欄位計數，得到各個區域房源數量。並用python畫出區域數量圓餅圖  
 
-![image](https://hackmd.io/_uploads/r1ATbQCZC.png)
+![room_location](https://github.com/ars1202/data_analysis_of_airbnb_in_taipei/assets/16890505/7a00a040-d383-4dad-a31b-c2a009705214)
 * 如圖可知，最多房源的行政區為萬華區，占了台北市房源約1/4，其次則為大安區19%、中正區13.7%，這三區的房源占比達到了整個台北市的5%左右。
 * 為何萬華的房源那麼多?我認為是因為這裡坐落著台灣最有名的商業區-西門町
 
@@ -53,9 +53,10 @@ ON san.`room_type`=t.`room_type` GROUP BY t.`room_type`;")
 | Shared room | 227 | 145 | 72 |
 
 * 接著使用python畫出房源類型長條圖(y軸為百分比)  
-![taipei](https://hackmd.io/_uploads/ByroB5kMR.png)
-![rome](https://hackmd.io/_uploads/rJsiS5kG0.png)
-![san francisco](https://hackmd.io/_uploads/ryajHcyfA.png)
+![taipei](https://github.com/ars1202/data_analysis_of_airbnb_in_taipei/assets/16890505/09120a49-3d88-419e-92e0-1fcdcd7b48f4)
+![rome](https://github.com/ars1202/data_analysis_of_airbnb_in_taipei/assets/16890505/afe3fa50-1404-481c-9d67-7c84234d9b75)
+![san francisco](https://github.com/ars1202/data_analysis_of_airbnb_in_taipei/assets/16890505/776ca983-664a-4165-af8d-77d5ae0e6359)
+
 * 透過圖表可以得知以下資訊  
     1. 性質接近民宿的entire home和private room超過了90%，而旅館占比<2%。和airbnb的成立初衷相似  
     2. 共享房間在台北的占比(4.8%)較羅馬(0.5%)和舊金山(0.9%)高，和我預想的相反。也許台灣對於共享房間的接受度並不低  
@@ -78,7 +79,8 @@ INNER JOIN (SELECT `room_type`,ROUND(AVG(REPLACE(REPLACE(`price`,'$',''),',','')
 ON b.`room_type`=t.`room_type`
 WHERE `number_of_reviews`>5 GROUP BY `room_type`;
 ```
-![avg_price](https://hackmd.io/_uploads/Hk83PQWGA.png)
+![avg_price](https://github.com/ars1202/data_analysis_of_airbnb_in_taipei/assets/16890505/73fa314c-3bc9-438d-bac2-7b136574651c)
+
 * 在所有類型中，台北的價格都只高於曼谷，低於東京和雪梨。  
 * 在hotel的類型中，台北的價格十分接近東京，而entire home和private room則有一定差距。  
 * 由此可以推測，台灣的旅館價格確實偏貴，但私人經營的民宿則沒有此情況。  
